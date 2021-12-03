@@ -1,0 +1,18 @@
+{
+  "name": "jamnodejs",
+  "version": "0.0.7",
+  "description": "Découverte de Node.js X CodeConcept Udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RKPF",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "jsonfile": "^6.1.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15"
+  }
+}

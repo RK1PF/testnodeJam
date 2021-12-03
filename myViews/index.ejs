@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Express | EJS.co</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      *:focus {
+        outline: 2px solid red;
+      }
+      body {
+        all: unset;
+      }
+
+      header {
+        width: 100%;
+        margin: 0 auto;
+        background-color: whitesmoke;
+        box-shadow: 10px 1px 20px black;
+      }
+      nav {
+        all: unset;
+        width: 100%;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .df {
+        display: flex;
+      }
+      .aic {
+        align-items: center;
+      }
+      .jcc {
+        justify-content: center;
+      }
+      .gap {
+        gap: 2rem;
+      }
+      .mb1 {
+        margin-bottom: 1em;
+      }
+      .mb2 {
+        margin-bottom: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-f">
+      <header>
+        <nav aria-label="Main" class="df aic jcc mb2">
+          <ul class="df aic jcc gap">
+            <li><a href="#" aria-current="page">Current Page</a></li>
+            <li><a href="#">Another Page</a></li>
+            <li><a href="#">Another Page</a></li>
+            <li><a href="#">Another Page</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container">
+        <h1>Découverte Node | Module Express EJS</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores ad
+          repudiandae iste! Amet, repellat. Fugiat.
+        </p>
+        <div>
+          <% if (locals.bro) { %>
+           <h1>Bro is set</h1>
+          
+           <% for( let i = 0; i < bro.length; i++ ) { %>
+              <p><%= bro[i].id %></p>
+              <p><%= bro[i].name %></p>
+              <hr />
+              <% } %>
+              <% } else { %>
+               <p>Désolé il n'y à pas de données à afficher</p>
+              <% } %>
+        </div>
+          <% if (locals.bro) { %>
+            <% bro.forEach(el => { %>
+             <p><%= el.id %> IDDDD</p>
+             <p><%= el.name %> Naaaaaaaaaame</p>
+            <% }) %>
+          <% } %>
+      </div>
+    </div>
+  </body>
+</html>
